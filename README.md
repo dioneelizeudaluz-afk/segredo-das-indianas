@@ -6,6 +6,7 @@ Página de vendas estática (HTML + CSS + JS) para o e-book **O Segredo das Indi
 
 ```
 index.html
+vercel.json
 assets/
   antes-depois-1.jpg
   antes-depois-2.jpg
@@ -23,9 +24,9 @@ README.md
 6. Animação de análise (2-3 segundos).
 7. Resultado final com botão para o WhatsApp (+258 83 536 7771), com as respostas incluídas na mensagem.
 
-## Como publicar no GitHub Pages
+## Como publicar na Vercel
 
-### 1. Criar o repositório
+### 1. Criar o repositório no GitHub
 
 1. Abre [github.com](https://github.com) e faz login.
 2. Clica em **New repository**.
@@ -33,54 +34,62 @@ README.md
 4. Marca **Public**.
 5. Clica **Create repository**.
 
-### 2. Carregar o index.html
+O Ghost IA aplica os ficheiros neste repositório.
 
-1. No repositório vazio, clica em **Add file** → **Upload files** (ou **Create new file**).
-2. Se for Create new file, escreve `index.html` no nome e cola o conteúdo.
-3. Clica **Commit changes**.
+### 2. Carregar as 3 imagens no repositório
 
-### 3. Criar a pasta assets
-
-1. Clica em **Add file** → **Create new file**.
-2. No nome escreve `assets/placeholder.txt` (para forçar a criação da pasta).
+1. No repositório GitHub, clica em **Add file** → **Create new file**.
+2. Nome: `assets/placeholder.txt` (isto cria a pasta `assets/`).
 3. Conteúdo: uma linha qualquer.
 4. **Commit changes**.
-
-### 4. Carregar as 3 imagens
-
-1. Clica na pasta `assets`.
-2. **Add file** → **Upload files**.
-3. Envia:
+5. Entra na pasta `assets`.
+6. **Add file** → **Upload files**.
+7. Envia:
    - `antes-depois-1.jpg`
    - `antes-depois-2.jpg`
    - `antes-depois-3.jpg`
-4. **Commit changes**.
-5. Podes apagar o `placeholder.txt` depois.
+8. **Commit changes**.
+9. Apaga o `placeholder.txt` (opcional).
 
-Se as imagens não estiverem disponíveis, a página mostra automaticamente um placeholder discreto a indicar o nome do ficheiro em falta. Nada quebra.
+### 3. Importar o projecto na Vercel
 
-### 5. Activar o GitHub Pages
+1. Abre [vercel.com/dashboard](https://vercel.com/dashboard).
+2. Clica **Add New** → **Project**.
+3. Escolhe **Import Git Repository**.
+4. Autoriza o GitHub se pedir.
+4. Seleciona o repositório `segredo-das-indianas`.
+5. Nas configurações do projecto:
+   - **Framework Preset:** deixa em **Other** (é HTML/CSS/JS puro, não é React/Vite).
+   - **Build Command:** vazio.
+   - **Output Directory:** vazio.
+   - **Install Command:** vazio.
+6. Clica **Deploy**.
+7. Espera 30 segundos.
 
-1. No repositório, clica em **Settings**.
-2. Menu lateral → **Pages**.
-3. **Source:** `Deploy from a branch`.
-4. **Branch:** `main` e pasta `/ (root)`.
-5. Clica **Save**.
-6. Espera 1-2 minutos.
-
-### 6. Obter o link público
-
-Aparece no topo da página de Pages:
+A Vercel dá-te automaticamente um URL tipo:
 
 ```
-https://SEU-USUARIO.github.io/segredo-das-indianas/
+https://segredo-das-indianas.vercel.app
 ```
 
-Abre esse link no telemóvel para testar.
+### 4. Ligar o domínio próprio
+
+1. Na Vercel, entra no projecto.
+2. **Settings** → **Domains**.
+3. Escreve o teu domínio (ex: `osegredodasindianas.com`) e clica **Add**.
+4. A Vercel mostra-te **2 registos DNS** (A e CNAME) que tens de adicionar no teu fornecedor de domínio (Namecheap, GoDaddy, Cloudflare, etc.).
+5. Vai ao painel do teu fornecedor de domínio e adiciona esses registos.
+6. Espera 5-30 minutos até a Vercel mostrar o domínio como **Valid Configuration**.
+
+Se não tiveres domínio, o URL `.vercel.app` funciona perfeitamente para começar.
+
+### 5. Redeploy automático
+
+Cada vez que o Ghost IA aplica um patch no GitHub, a Vercel detecta a alteração e faz deploy automático em 30-60 segundos. Não precisas de fazer nada.
 
 ## Como testar o questionário
 
-1. Abre a página.
+1. Abre o site (URL Vercel ou domínio próprio).
 2. Clica no botão dourado.
 3. Responde às 4 perguntas.
 4. A animação de análise aparece.
@@ -104,7 +113,7 @@ Substitui os 3 blocos pelos depoimentos verdadeiros. Se não tiveres depoimentos
 
 Actualmente a capa é feita em HTML/CSS (o bloco `.capa-ebook`). Se quiseres usar uma imagem real:
 
-1. Coloca `assets/capa-ebook.jpg`.
+1. Coloca `assets/capa-ebook.jpg` no repositório.
 2. No `index.html`, substitui o bloco `<div class="capa-ebook">...</div>` por:
 
 ```html

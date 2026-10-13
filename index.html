@@ -1,0 +1,945 @@
+<!doctype html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#073B2D" />
+  <title>O Segredo das Indianas — 42 receitas e plano alimentar de 30 dias</title>
+  <meta name="description" content="Guia digital com 42 receitas completas, bebidas naturais, sugestoes de refeicoes e lista de compras. Disponivel por 99 MT." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="O Segredo das Indianas" />
+  <meta property="og:description" content="42 receitas completas, bebidas naturais, plano alimentar de 30 dias e lista de compras. Por 99 MT." />
+  <meta property="og:locale" content="pt_MZ" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --verde-escuro: #073B2D;
+      --verde: #0D5943;
+      --dourado: #F3C64E;
+      --creme: #FFFAF0;
+      --texto: #18352D;
+      --branco: #FFFFFF;
+      --sombra: 0 8px 24px rgba(7, 59, 45, 0.08);
+      --sombra-forte: 0 12px 32px rgba(7, 59, 45, 0.15);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--texto);
+      background-color: var(--creme);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--verde-escuro);
+    }
+
+    img { max-width: 100%; display: block; height: auto; }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px 32px;
+      border: none;
+      border-radius: 999px;
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+      min-height: 56px;
+      text-align: center;
+    }
+
+    .btn-dourado {
+      background-color: var(--dourado);
+      color: var(--verde-escuro);
+      box-shadow: var(--sombra-forte);
+    }
+
+    .btn-dourado:hover, .btn-dourado:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px rgba(243, 198, 78, 0.4);
+    }
+
+    .btn-verde {
+      background-color: var(--verde-escuro);
+      color: var(--branco);
+      box-shadow: var(--sombra-forte);
+    }
+
+    .btn-verde:hover, .btn-verde:focus-visible {
+      background-color: var(--verde);
+      transform: translateY(-2px);
+    }
+
+    .btn-voltar {
+      background: transparent;
+      color: var(--verde-escuro);
+      font-size: 14px;
+      padding: 10px 16px;
+      min-height: 44px;
+      font-weight: 600;
+      border: 1px solid rgba(7, 59, 45, 0.15);
+    }
+
+    .btn-voltar:hover { background: rgba(7, 59, 45, 0.05); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(180deg, var(--verde-escuro) 0%, var(--verde) 100%);
+      color: var(--branco);
+      padding: 48px 0 64px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(243, 198, 78, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(243, 198, 78, 0.15);
+      border: 1px solid rgba(243, 198, 78, 0.4);
+      color: var(--dourado);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      color: var(--branco);
+      font-size: clamp(28px, 6vw, 44px);
+      margin-bottom: 16px;
+      max-width: 640px;
+    }
+
+    .hero-sub {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: clamp(15px, 2.2vw, 17px);
+      max-width: 560px;
+      margin-bottom: 32px;
+    }
+
+    .hero-content {
+      display: grid;
+      gap: 40px;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .hero-content { grid-template-columns: 1.2fr 1fr; }
+    }
+
+    /* CAPA DO E-BOOK (HTML/CSS) */
+    .capa-ebook {
+      width: 100%;
+      max-width: 240px;
+      margin: 0 auto;
+      aspect-ratio: 3 / 4;
+      background: linear-gradient(135deg, #0D5943 0%, #073B2D 100%);
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      padding: 28px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      border: 3px solid rgba(243, 198, 78, 0.3);
+    }
+
+    .capa-ebook::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--dourado);
+    }
+
+    .capa-titulo-pequeno {
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--dourado);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .capa-titulo {
+      font-family: 'Fraunces', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--branco);
+      line-height: 1.1;
+    }
+
+    .capa-rodape {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.7);
+      letter-spacing: 1px;
+    }
+
+    .capa-divisor {
+      width: 40px;
+      height: 2px;
+      background: var(--dourado);
+      margin: 12px 0;
+    }
+
+    /* PREÇO */
+    .preco-bloco {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 24px 0;
+      flex-wrap: wrap;
+    }
+
+    .preco-valor {
+      font-family: 'Fraunces', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--dourado);
+      line-height: 1;
+    }
+
+    .preco-nota {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* SECÇÕES GENÉRICAS */
+    section.bloco {
+      padding: 56px 0;
+    }
+
+    section.bloco h2 {
+      font-size: clamp(22px, 4vw, 30px);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .subtitulo-seccao {
+      text-align: center;
+      color: var(--verde);
+      font-size: 15px;
+      max-width: 560px;
+      margin: 0 auto 40px;
+    }
+
+    /* IMAGENS ANTES/DEPOIS */
+    .antes-depois {
+      background: var(--branco);
+    }
+
+    .antes-depois-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 640px) {
+      .antes-depois-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .imagem-cartao {
+      background: var(--creme);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--sombra);
+      aspect-ratio: 3 / 4;
+      position: relative;
+    }
+
+    .imagem-cartao img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .imagem-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(7, 59, 45, 0.05);
+      color: var(--verde-escuro);
+      font-size: 13px;
+      padding: 20px;
+      text-align: center;
+      gap: 8px;
+      border: 2px dashed rgba(7, 59, 45, 0.15);
+      border-radius: 16px;
+    }
+
+    .imagem-placeholder strong { font-size: 14px; }
+
+    .nota-discreta {
+      text-align: center;
+      font-size: 12px;
+      color: rgba(24, 53, 45, 0.6);
+      margin-top: 24px;
+      font-style: italic;
+    }
+
+    /* 3 CARTÕES */
+    .cartoes-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 640px) {
+      .cartoes-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .cartao {
+      background: var(--branco);
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: var(--sombra);
+      border-top: 4px solid var(--dourado);
+      text-align: center;
+    }
+
+    .cartao h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .cartao p {
+      font-size: 14px;
+      color: var(--verde);
+      line-height: 1.5;
+    }
+
+    /* DEPOIMENTOS */
+    .depoimentos {
+      background: var(--branco);
+    }
+
+    .depoimentos-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 640px) {
+      .depoimentos-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .depoimento {
+      background: var(--creme);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--sombra);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .depoimento-texto {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--texto);
+      font-style: italic;
+    }
+
+    .depoimento-autor {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--verde-escuro);
+    }
+
+    /* QUESTIONÁRIO */
+    #quiz {
+      background: var(--creme);
+      padding: 56px 0 64px;
+    }
+
+    .quiz-caixa {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--branco);
+      border-radius: 24px;
+      padding: 32px 24px;
+      box-shadow: 0 20px 60px rgba(7, 59, 45, 0.12);
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (min-width: 640px) {
+      .quiz-caixa { padding: 40px 36px; }
+    }
+
+    .quiz-progresso {
+      width: 100%;
+      height: 6px;
+      background: rgba(7, 59, 45, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+
+    .quiz-progresso-barra {
+      height: 100%;
+      background: linear-gradient(90deg, var(--dourado), #E5B63C);
+      width: 25%;
+      transition: width 0.4s ease;
+      border-radius: 999px;
+    }
+
+    .quiz-passo {
+      display: none;
+      flex-direction: column;
+      flex: 1;
+      animation: fadeUp 0.4s ease both;
+    }
+
+    .quiz-passo.ativo { display: flex; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    .quiz-numero {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--dourado);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .quiz-pergunta {
+      font-size: clamp(19px, 3vw, 23px);
+      margin-bottom: 24px;
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      color: var(--verde-escuro);
+    }
+
+    .quiz-opcoes {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .quiz-opcao {
+      background: var(--creme);
+      border: 2px solid rgba(7, 59, 45, 0.1);
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--texto);
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .quiz-opcao:hover, .quiz-opcao:focus-visible {
+      border-color: var(--verde);
+      background: rgba(13, 89, 67, 0.05);
+    }
+
+    .quiz-opcao.selecionada {
+      border-color: var(--verde-escuro);
+      background: var(--verde-escuro);
+      color: var(--branco);
+    }
+
+    .quiz-opcao.selecionada::after {
+      content: '✓';
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .quiz-rodape {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      gap: 12px;
+    }
+
+    /* ANIMAÇÃO DE ANÁLISE */
+    #analise {
+      display: none;
+      background: var(--creme);
+      padding: 56px 0 64px;
+    }
+
+    #analise.ativo { display: block; }
+
+    .analise-caixa {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .analise-circulo {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 24px;
+      border: 4px solid rgba(7, 59, 45, 0.1);
+      border-top-color: var(--dourado);
+      border-radius: 50%;
+      animation: rodar 0.9s linear infinite;
+    }
+
+    @keyframes rodar { to { transform: rotate(360deg); } }
+
+    .analise-texto {
+      font-size: 16px;
+      color: var(--verde-escuro);
+      font-weight: 500;
+      min-height: 24px;
+      transition: opacity 0.3s ease;
+    }
+
+    /* RESULTADO */
+    #resultado {
+      display: none;
+      padding: 56px 0 64px;
+    }
+
+    #resultado.ativo { display: block; }
+
+    .resultado-caixa {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+      background: var(--branco);
+      border-radius: 24px;
+      padding: 40px 28px;
+      box-shadow: 0 20px 60px rgba(7, 59, 45, 0.12);
+    }
+
+    .resultado-icone {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 20px;
+      background: rgba(243, 198, 78, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+
+    .resultado-caixa h2 { margin-bottom: 12px; }
+
+    .resultado-caixa p {
+      color: var(--verde);
+      font-size: 15px;
+      margin-bottom: 28px;
+    }
+
+    /* RODAPÉ */
+    footer {
+      background: var(--verde-escuro);
+      color: rgba(255, 255, 255, 0.6);
+      padding: 32px 0;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    footer p { margin-bottom: 6px; }
+    footer a { color: var(--dourado); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HERO / OFERTA ============ -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div>
+          <span class="hero-badge">E-book digital em PDF</span>
+          <h1>Descobre novas receitas e organiza a tua alimenta&ccedil;&atilde;o durante 30 dias</h1>
+          <p class="hero-sub">Um guia digital com 42 receitas completas, bebidas naturais, sugest&otilde;es de refei&ccedil;&otilde;es e uma lista de compras para te ajudar a variar o teu dia a dia.</p>
+
+          <div class="preco-bloco">
+            <span class="preco-valor">99 MT</span>
+            <span class="preco-nota">Produto digital em PDF</span>
+          </div>
+
+          <button class="btn btn-dourado" type="button" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">
+            QUERO TER ACESSO AO SEGREDO
+          </button>
+        </div>
+
+        <div>
+          <div class="capa-ebook">
+            <div>
+              <div class="capa-titulo-pequeno">Guia digital</div>
+              <div class="capa-divisor"></div>
+            </div>
+            <div class="capa-titulo">O Segredo<br>das Indianas</div>
+            <div class="capa-rodape">42 receitas &middot; 30 dias</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ ANTES E DEPOIS ============ -->
+  <section class="bloco antes-depois">
+    <div class="container">
+      <h2>Inspira-te a cuidar dos teus h&aacute;bitos</h2>
+      <p class="subtitulo-seccao">Imagens de percursos reais de pessoas que decidiram mudar a sua rotina.</p>
+
+      <div class="antes-depois-grid">
+        <div class="imagem-cartao">
+          <img src="assets/antes-depois-1.jpg" alt="Antes e depois 1" loading="lazy" onerror="this.parentElement.innerHTML='&lt;div class=&quot;imagem-placeholder&quot;&gt;&lt;strong&gt;Imagem em falta&lt;/strong&gt;&lt;span&gt;Adiciona o ficheiro&lt;br&gt;assets/antes-depois-1.jpg&lt;/span&gt;&lt;/div&gt;'" />
+        </div>
+        <div class="imagem-cartao">
+          <img src="assets/antes-depois-2.jpg" alt="Antes e depois 2" loading="lazy" onerror="this.parentElement.innerHTML='&lt;div class=&quot;imagem-placeholder&quot;&gt;&lt;strong&gt;Imagem em falta&lt;/strong&gt;&lt;span&gt;Adiciona o ficheiro&lt;br&gt;assets/antes-depois-2.jpg&lt;/span&gt;&lt;/div&gt;'" />
+        </div>
+        <div class="imagem-cartao">
+          <img src="assets/antes-depois-3.jpg" alt="Antes e depois 3" loading="lazy" onerror="this.parentElement.innerHTML='&lt;div class=&quot;imagem-placeholder&quot;&gt;&lt;strong&gt;Imagem em falta&lt;/strong&gt;&lt;span&gt;Adiciona o ficheiro&lt;br&gt;assets/antes-depois-3.jpg&lt;/span&gt;&lt;/div&gt;'" />
+        </div>
+      </div>
+
+      <p class="nota-discreta">Cada percurso &eacute; individual. As imagens n&atilde;o garantem que outras pessoas obtenham os mesmos resultados.</p>
+    </div>
+  </section>
+
+  <!-- ============ O QUE VAI ENCONTRAR ============ -->
+  <section class="bloco">
+    <div class="container">
+      <h2>O que vais encontrar no e-book?</h2>
+      <p class="subtitulo-seccao">Conte&uacute;do pensado para te ajudar a organizar as tuas refei&ccedil;&otilde;es de forma simples.</p>
+
+      <div class="cartoes-grid">
+        <div class="cartao">
+          <h3>42 receitas completas</h3>
+          <p>Bebidas naturais, pequenos-almo&ccedil;os, sopas e pratos principais.</p>
+        </div>
+        <div class="cartao">
+          <h3>Plano alimentar de 30 dias</h3>
+          <p>Sugest&otilde;es para organizares as tuas refei&ccedil;&otilde;es ao longo do m&ecirc;s.</p>
+        </div>
+        <div class="cartao">
+          <h3>Lista de compras</h3>
+          <p>Dicas para planeares as compras e organizares a cozinha.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEPOIMENTOS ============ -->
+  <section class="bloco depoimentos" id="depoimentos">
+    <div class="container">
+      <h2>O que dizem os clientes</h2>
+      <p class="subtitulo-seccao">Espa&ccedil;o reservado para depoimentos reais. Substitui os textos abaixo antes de publicar.</p>
+
+      <div class="depoimentos-grid">
+        <div class="depoimento">
+          <p class="depoimento-texto">[Adicionar depoimento real de cliente]</p>
+          <p class="depoimento-autor">[Nome ou iniciais]</p>
+        </div>
+        <div class="depoimento">
+          <p class="depoimento-texto">[Adicionar depoimento real de cliente]</p>
+          <p class="depoimento-autor">[Nome ou iniciais]</p>
+        </div>
+        <div class="depoimento">
+          <p class="depoimento-texto">[Adicionar depoimento real de cliente]</p>
+          <p class="depoimento-autor">[Nome ou iniciais]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUESTIONÁRIO ============ -->
+  <section id="quiz">
+    <div class="container">
+      <div class="quiz-caixa">
+
+        <div class="quiz-progresso">
+          <div class="quiz-progresso-barra" id="barra-progresso"></div>
+        </div>
+
+        <!-- Pergunta 1 -->
+        <div class="quiz-passo ativo" data-passo="1">
+          <div class="quiz-numero">Pergunta 1 de 4</div>
+          <h2 class="quiz-pergunta">Gostarias de conhecer o segredo das Indianas e descobrir novas ideias para a tua alimenta&ccedil;&atilde;o?</h2>
+          <div class="quiz-opcoes">
+            <button class="quiz-opcao" type="button" data-valor="Sim, gostaria">Sim, gostaria!</button>
+            <button class="quiz-opcao" type="button" data-valor="Nao, obrigado">N&atilde;o, obrigado/a</button>
+          </div>
+        </div>
+
+        <!-- Pergunta 2 -->
+        <div class="quiz-passo" data-passo="2">
+          <div class="quiz-numero">Pergunta 2 de 4</div>
+          <h2 class="quiz-pergunta">Qual &eacute; o teu objetivo de peso?</h2>
+          <div class="quiz-opcoes">
+            <button class="quiz-opcao" type="button" data-valor="1-3 kg">1&ndash;3 kg</button>
+            <button class="quiz-opcao" type="button" data-valor="4-6 kg">4&ndash;6 kg</button>
+            <button class="quiz-opcao" type="button" data-valor="7-10 kg">7&ndash;10 kg</button>
+            <button class="quiz-opcao" type="button" data-valor="Mais de 10 kg">Mais de 10 kg</button>
+            <button class="quiz-opcao" type="button" data-valor="Ainda nao sei">Ainda n&atilde;o sei</button>
+          </div>
+        </div>
+
+        <!-- Pergunta 3 -->
+        <div class="quiz-passo" data-passo="3">
+          <div class="quiz-numero">Pergunta 3 de 4</div>
+          <h2 class="quiz-pergunta">Estarias disposta/o a dedicar 30 dias a organizar melhor as tuas refei&ccedil;&otilde;es com ajuda do guia?</h2>
+          <div class="quiz-opcoes">
+            <button class="quiz-opcao" type="button" data-valor="Sim">Sim</button>
+            <button class="quiz-opcao" type="button" data-valor="Nao">N&atilde;o</button>
+          </div>
+        </div>
+
+        <!-- Pergunta 4 -->
+        <div class="quiz-passo" data-passo="4">
+          <div class="quiz-numero">Pergunta 4 de 4</div>
+          <h2 class="quiz-pergunta">Est&aacute;s preparada/o para conhecer as receitas e ver se o e-book combina contigo?</h2>
+          <div class="quiz-opcoes">
+            <button class="quiz-opcao" type="button" data-valor="Sim, vamos a isso">Sim, vamos a isso!</button>
+            <button class="quiz-opcao" type="button" data-valor="Quero saber mais primeiro">Quero saber mais primeiro</button>
+          </div>
+        </div>
+
+        <div class="quiz-rodape">
+          <button class="btn btn-voltar" type="button" id="btn-voltar" style="visibility:hidden">&larr; Voltar</button>
+          <span></span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ANIMAÇÃO DE ANÁLISE ============ -->
+  <section id="analise">
+    <div class="container">
+      <div class="analise-caixa">
+        <div class="analise-circulo"></div>
+        <p class="analise-texto" id="analise-texto">Estamos a organizar as tuas respostas...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTADO E WHATSAPP ============ -->
+  <section id="resultado">
+    <div class="container">
+      <div class="resultado-caixa">
+        <div class="resultado-icone">✓</div>
+        <h2>O teu pr&oacute;ximo passo come&ccedil;a aqui</h2>
+        <p>Fala connosco no WhatsApp para conhecer os detalhes do e-book O Segredo das Indianas, dispon&iacute;vel por 99 MT.</p>
+        <a href="#" class="btn btn-verde" id="btn-whatsapp" rel="noopener">RECEBER INFORMA&Ccedil;&Otilde;ES NO WHATSAPP</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="ano"></span> O Segredo das Indianas</p>
+      <p>Este material &eacute; informativo e n&atilde;o substitui aconselhamento m&eacute;dico ou nutricional profissional.</p>
+      <p>Contacto: <a href="https://wa.me/258835367771" rel="noopener">+258 83 536 7771</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var WHATSAPP_NUMERO = '258835367771';
+      var MENSAGEM_BASE = 'Ola! Quero saber como adquirir o e-book O Segredo das Indianas por 99 MT.';
+
+      var respostas = {
+        q1: '',
+        q2: '',
+        q3: '',
+        q4: ''
+      };
+
+      var passoAtual = 1;
+      var totalPassos = 4;
+
+      var barra = document.getElementById('barra-progresso');
+      var btnVoltar = document.getElementById('btn-voltar');
+      var passos = document.querySelectorAll('.quiz-passo');
+      var quizSecao = document.getElementById('quiz');
+      var analiseSecao = document.getElementById('analise');
+      var resultadoSecao = document.getElementById('resultado');
+      var btnWhats = document.getElementById('btn-whatsapp');
+
+      document.getElementById('ano').textContent = new Date().getFullYear();
+
+      function atualizarBarra() {
+        var pct = (passoAtual / totalPassos) * 100;
+        barra.style.width = pct + '%';
+      }
+
+      function mostrarPasso(n) {
+        passos.forEach(function (p) {
+          p.classList.toggle('ativo', parseInt(p.getAttribute('data-passo'), 10) === n);
+        });
+        passoAtual = n;
+        atualizarBarra();
+        btnVoltar.style.visibility = n > 1 ? 'visible' : 'hidden';
+      }
+
+      function ligarOpcoes() {
+        document.querySelectorAll('.quiz-opcao').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var passo = btn.closest('.quiz-passo');
+            var numero = parseInt(passo.getAttribute('data-passo'), 10);
+            var valor = btn.getAttribute('data-valor') || '';
+
+            passo.querySelectorAll('.quiz-opcao').forEach(function (b) {
+              b.classList.remove('selecionada');
+            });
+            btn.classList.add('selecionada');
+
+            if (numero === 1) respostas.q1 = valor;
+            if (numero === 2) respostas.q2 = valor;
+            if (numero === 3) respostas.q3 = valor;
+            if (numero === 4) respostas.q4 = valor;
+
+            setTimeout(function () {
+              if (numero < totalPassos) {
+                mostrarPasso(numero + 1);
+              } else {
+                iniciarAnalise();
+              }
+            }, 350);
+          });
+        });
+      }
+
+      btnVoltar.addEventListener('click', function () {
+        if (passoAtual > 1) {
+          mostrarPasso(passoAtual - 1);
+        }
+      });
+
+      function iniciarAnalise() {
+        quizSecao.style.display = 'none';
+        analiseSecao.classList.add('ativo');
+        analiseSecao.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        var textoEl = document.getElementById('analise-texto');
+        var textos = [
+          'Estamos a organizar as tuas respostas...',
+          'A preparar as informacoes do e-book...',
+          'Quase pronto...'
+        ];
+        var i = 0;
+
+        var intervalo = setInterval(function () {
+          i++;
+          if (i >= textos.length) {
+            clearInterval(intervalo);
+            return;
+          }
+          textoEl.style.opacity = '0';
+          setTimeout(function () {
+            textoEl.textContent = textos[i];
+            textoEl.style.opacity = '1';
+          }, 200);
+        }, 900);
+
+        setTimeout(function () {
+          analiseSecao.classList.remove('ativo');
+          mostrarResultado();
+        }, 2800);
+      }
+
+      function construirMensagem() {
+        var linhas = [
+          MENSAGEM_BASE,
+          '',
+          'As minhas respostas ao questionario:',
+          '1) ' + respostas.q1,
+          '2) ' + respostas.q2,
+          '3) ' + respostas.q3,
+          '4) ' + respostas.q4
+        ];
+        return linhas.join('\n');
+      }
+
+      function mostrarResultado() {
+        var texto = construirMensagem();
+        var url = 'https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent(texto);
+        btnWhats.setAttribute('href', url);
+
+        resultadoSecao.classList.add('ativo');
+        resultadoSecao.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      ligarOpcoes();
+      atualizarBarra();
+    })();
+  </script>
+</body>
+</html>
